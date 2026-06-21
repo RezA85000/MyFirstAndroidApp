@@ -1,0 +1,16 @@
+image: gitpod/workspace-android
+
+tasks:
+  - name: Setup Android
+    init: |
+      echo "Setting up Android SDK..."
+      sdkmanager --install "platforms;android-30" "build-tools;30.0.3" "platform-tools"
+    command: |
+      echo "Android SDK Ready!"
+      echo "Use: ./gradlew build"
+
+vscode:
+  extensions:
+    - vscjava.vscode-java-pack
+    - redhat.java
+    - adarshpandey.java-snippets
